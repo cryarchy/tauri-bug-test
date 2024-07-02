@@ -1,0 +1,19 @@
+[package]
+authors = ["You"]
+description = ""
+edition = "2021"
+exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
+links = "tauri-plugin-hello"
+name = "tauri-plugin-hello"
+rust-version = "1.70"
+version = "0.0.0"
+
+[dependencies]
+serde.workspace = true
+specta.workspace = true
+tauri-specta.workspace = true
+tauri.workspace = true
+thiserror.workspace = true
+
+[build-dependencies]
+tauri-plugin.workspace = true
