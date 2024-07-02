@@ -1,10 +1,11 @@
-use tauri::{AppHandle, command, Runtime};
+use tauri::{command, AppHandle, Runtime};
 
 use crate::models::*;
-use crate::Result;
 use crate::HelloExt;
+use crate::Result;
 
-#[command]
+#[tauri::command]
+#[specta::specta]
 pub(crate) async fn ping<R: Runtime>(
     app: AppHandle<R>,
     payload: PingRequest,
